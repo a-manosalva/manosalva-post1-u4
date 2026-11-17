@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f3f5f9;
+  color: #243044;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 24px 16px;
+  background: #26354d;
+  color: #fff;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#controles,
+#filtros,
+#stats,
+#tablero {
+  width: min(100% - 32px, 1000px);
+  margin: 20px auto;
+}
+
+#controles,
+#filtros,
+.filtro-grupo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+#controles input,
+#controles select,
+#filtros select,
+button {
+  min-height: 40px;
+  padding: 9px 12px;
+  border: 1px solid #cbd3df;
+  border-radius: 6px;
+  font: inherit;
+}
+
+#controles input {
+  flex: 1 1 180px;
+}
+
+#controles select,
+#filtros select {
+  background: #fff;
+}
+
+button {
+  border: 0;
+  background: #3569b7;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover,
+button.activo {
+  background: #244b85;
+}
+
+#filtros {
+  justify-content: space-between;
+}
+
+#stats {
+  padding: 14px 16px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px #1f293312;
+}
+
+#tablero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.tarea {
+  padding: 16px;
+  border: 1px solid #dce2eb;
+  border-left: 5px solid #94a3b8;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px #1f293312;
+}
+
+.tarea.estado-en-progreso {
+  border-left-color: #e6a23c;
+}
+
+.tarea.estado-completada {
+  border-left-color: #38a169;
+}
+
+.badge-prioridad,
+.badge-estado {
+  display: inline-block;
+  margin: 0 6px 10px 0;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: #edf1f7;
+  font-size: 0.8rem;
+}
+
+.prioridad-alta .badge-prioridad {
+  background: #fde2e2;
+  color: #a4262c;
+}
+
+.prioridad-media .badge-prioridad {
+  background: #fff0cc;
+  color: #805b00;
+}
+
+.prioridad-baja .badge-prioridad {
+  background: #dff3e6;
+  color: #246b3c;
+}
+
+.tarea h3 {
+  margin: 4px 0 8px;
+}
+
+.tarea p {
+  color: #566276;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.acciones-tarea {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.btn-eliminar {
+  background: #b83a3a;
+}
+
+.btn-eliminar:hover {
+  background: #8f2929;
+}
+
+.oculta {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  #filtros {
+    align-items: stretch;
+  }
+
+  .filtro-grupo {
+    width: 100%;
+  }
+
+  .filtro-grupo button,
+  #filtros select {
+    flex: 1 1 auto;
+  }
+}
