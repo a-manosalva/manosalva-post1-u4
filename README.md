@@ -13,7 +13,8 @@ avance de estado y eliminación (con un único listener delegado que
 distingue acciones por data-action), filtrado combinado por estado
 y prioridad, un switch para la apariencia por prioridad, y
 estadísticas calculadas con reduce() y for...of. Ver
-parte-1-tablero-tareas/.
+parte-1-tablero-tareas/. Se añadió un styles.css sencillo para esta parte,
+ya que la guía no incluía una hoja de estilos.
 
 ## Parte 2 — Formulario de registro de colaborador
 Formulario de registro con validación completa del lado del
@@ -22,7 +23,8 @@ cliente: campo de usuario validado con pattern, campo condicional
 horas validado con rangeUnderflow/rangeOverflow, checkbox de
 términos validado por .checked, control del evento submit y un
 indicador de fortaleza de contraseña. Ver
-parte-2-formulario-colaborador/.
+parte-2-formulario-colaborador/. Se añadió un styles.css sencillo para esta
+parte, ya que la guía no incluía una hoja de estilos.
 
 ## Decisiones de diseño
 
